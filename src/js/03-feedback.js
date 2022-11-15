@@ -6,7 +6,7 @@ const formData = JSON.parse(localStorage.getItem('feedback-form-state')) || {
     email: '',
     message: '',
 };
-const _ = require('underscore');
+const _ = require('lodash.throttle');
 
 form.addEventListener('input', _.throttle(saveData, 500));
 form.addEventListener('submit', formSubmit);

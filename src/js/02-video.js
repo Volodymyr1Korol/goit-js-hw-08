@@ -3,7 +3,7 @@ import Player from '@vimeo/player';
 const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
 
-const _ = require('underscore');
+const _ = require('lodash.throttle');
 
 player.on(
     'timeupdate',
